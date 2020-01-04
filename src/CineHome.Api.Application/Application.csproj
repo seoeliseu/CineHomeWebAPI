@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CineHome.Api.Domain\Domain.csproj" />
+    <ProjectReference Include="..\CineHome.Api.Service\Service.csproj" />
+    <ProjectReference Include="..\CineHome.Api.Infra.CrossCutting\CrossCutting.csproj" />
   </ItemGroup>
 
 </Project>
