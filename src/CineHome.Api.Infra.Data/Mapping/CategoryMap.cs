@@ -10,7 +10,7 @@ namespace CineHome.Api.Infra.Data.Mapping
         {
             builder.ToTable("Category");
             builder.HasKey(p => p.Id);
-            builder.Property(p => p.CreatedAt).IsRequired();
+            builder.Property(p => p.CreateAt).IsRequired();
             builder.HasIndex(p => p.Name).IsUnique();
             builder.Property(p => p.Name);
         }

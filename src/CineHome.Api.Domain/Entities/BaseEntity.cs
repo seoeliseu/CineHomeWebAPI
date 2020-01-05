@@ -8,11 +8,11 @@ namespace CineHome.Api.Domain.Entities
         [Key]
         public Guid Id { get; set; }
         [Required]
-        private DateTime? _createdAt;
-        public DateTime? CreatedAt
+        private DateTime? _createAt;
+        public DateTime? CreateAt
         {
-            get { return _createdAt; }
-            set { _createdAt = (value == null ? DateTime.UtcNow : value); }
+            get { return _createAt; }
+            set { _createAt = (value == null ? DateTime.UtcNow : value); }
         }
 
     }

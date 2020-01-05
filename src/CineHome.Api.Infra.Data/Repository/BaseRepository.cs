@@ -21,7 +21,7 @@ namespace CineHome.Api.Infra.Data.Repository
         {
             try
             {
-                var result = _dataset.SingleOrDefaultAsync(p => p.Id == id);
+                var result = await _dataset.SingleOrDefaultAsync(p => p.Id.Equals(id));
                 if (result == null) return false;
 
                 _context.Remove(result);
@@ -29,7 +29,6 @@ namespace CineHome.Api.Infra.Data.Repository
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             return true;
@@ -44,7 +43,7 @@ namespace CineHome.Api.Infra.Data.Repository
                     item.Id = Guid.NewGuid();
                 }
 
-                item.CreatedAt = DateTime.UtcNow;
+                item.CreateAt = DateTime.UtcNow;
                 _dataset.Add(item);
                 await _context.SaveChangesAsync();
             }
@@ -89,16 +88,15 @@ namespace CineHome.Api.Infra.Data.Repository
             try
             {
                 //Busca registro atual no banco de dados
-                var result = await _dataset.SingleOrDefaultAsync(p => p.Id == item.Id);
+                var result = await _dataset.SingleOrDefaultAsync(p => p.Id.Equals(item.Id));
                 if (result == null) return null;
 
-                item.CreatedAt = result.CreatedAt;
+                item.CreateAt = result.CreateAt;
                 _context.Entry(result).CurrentValues.SetValues(item);
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             return item;

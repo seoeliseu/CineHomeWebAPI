@@ -10,7 +10,7 @@ namespace CineHome.Api.Infra.Data.Mapping
         {
             builder.ToTable("Movie");
             builder.HasKey(p => p.Id);
-            builder.Property(p => p.CreatedAt).IsRequired();
+            builder.Property(p => p.CreateAt).IsRequired();
             builder.Property(p => p.OriginalTitle).IsRequired().HasMaxLength(255);
             builder.Property(p => p.NationalTitle).HasMaxLength(255);
             builder.Property(p => p.DurationMinutes);

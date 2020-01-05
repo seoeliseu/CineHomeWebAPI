@@ -1,6 +1,7 @@
 using System;
 using System.Net;
 using System.Threading.Tasks;
+using CineHome.Api.Domain.Dtos.Movie;
 using CineHome.Api.Domain.Entities;
 using CineHome.Api.Domain.Interfaces.Services.Movie;
 using Microsoft.AspNetCore.Mvc;
@@ -49,7 +50,7 @@ namespace CineHome.Api.Application.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] MovieEntity movie)
+        public async Task<ActionResult> Post([FromBody] MovieDtoCreate movie)
         {
             try
             {
@@ -59,6 +60,38 @@ namespace CineHome.Api.Application.Controllers
                     return Created(new Uri(Url.Link("GetWithId", new { id = result.Id })), result);
                 else
                     return BadRequest();
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> Put([FromBody] MovieDtoUpdate movie)
+        {
+            try
+            {
+                if (!ModelState.IsValid) return BadRequest(ModelState);
+                var result = await _service.Put(movie);
+                if (result != null)
+                    return Ok(result);
+                else
+                    return BadRequest();
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(Guid id)
+        {
+            try
+            {
+                if (!ModelState.IsValid) return BadRequest(ModelState);
+                return Ok(await _service.Delete(id));
             }
             catch (ArgumentException ex)
             {
