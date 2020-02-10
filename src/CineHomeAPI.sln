@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "CineHome.Api.Application\Application.csproj", "{FFF6CBF3-F9B6-468A-A7D7-CB026793BAA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "CineHome.Api.Application\Application.csproj", "{FFF6CBF3-F9B6-468A-A7D7-CB026793BAA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "CineHome.Api.Domain\Domain.csproj", "{B05BC08E-F9F0-457D-B8B0-AB9EA456E42C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "CineHome.Api.Domain\Domain.csproj", "{B05BC08E-F9F0-457D-B8B0-AB9EA456E42C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCutting", "CineHome.Api.Infra.CrossCutting\CrossCutting.csproj", "{452E38B0-937E-461A-8056-B72CB972B54E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting", "CineHome.Api.Infra.CrossCutting\CrossCutting.csproj", "{452E38B0-937E-461A-8056-B72CB972B54E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "CineHome.Api.Infra.Data\Data.csproj", "{4C2A390B-F7A2-4CDB-9E19-9AAA61E9452D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "CineHome.Api.Infra.Data\Data.csproj", "{4C2A390B-F7A2-4CDB-9E19-9AAA61E9452D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "CineHome.Api.Service\Service.csproj", "{9C1D2114-ECA5-4349-874C-F4E3ED2F2F87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "CineHome.Api.Service\Service.csproj", "{9C1D2114-ECA5-4349-874C-F4E3ED2F2F87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FFF6CBF3-F9B6-468A-A7D7-CB026793BAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -86,5 +83,11 @@ Global
 		{9C1D2114-ECA5-4349-874C-F4E3ED2F2F87}.Release|x64.Build.0 = Release|Any CPU
 		{9C1D2114-ECA5-4349-874C-F4E3ED2F2F87}.Release|x86.ActiveCfg = Release|Any CPU
 		{9C1D2114-ECA5-4349-874C-F4E3ED2F2F87}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CB5126F-AC2D-4D4D-9DED-40F1AC419C05}
 	EndGlobalSection
 EndGlobal

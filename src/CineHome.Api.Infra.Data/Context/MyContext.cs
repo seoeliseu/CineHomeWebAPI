@@ -8,6 +8,7 @@ namespace CineHome.Api.Infra.Data.Context
     {
         public DbSet<MovieEntity> Movies { get; set; }
         public DbSet<CategoryEntity> Categories { get; set; }
+        public DbSet<MovieCategoryEntity> MovieCategories { get; set; }
 
         public MyContext(DbContextOptions<MyContext> options) : base(options) { }
 
@@ -16,6 +17,7 @@ namespace CineHome.Api.Infra.Data.Context
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<MovieEntity>(new MovieMap().Configure);
             modelBuilder.Entity<CategoryEntity>(new CategoryMap().Configure);
+            modelBuilder.Entity<MovieCategoryEntity>(new MovieCategoryMap().Configure);
         }
     }
 }

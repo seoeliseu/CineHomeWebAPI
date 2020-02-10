@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace CineHome.Api.Domain.Entities
@@ -10,5 +11,7 @@ namespace CineHome.Api.Domain.Entities
         public string NationalTitle { get; set; }
         public int DurationMinutes { get; set; }
         public short ReleaseYear { get; set; }
+
+        public ICollection<MovieCategoryEntity> MovieCategory { get; set; }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace CineHome.Api.Domain.Entities
@@ -6,5 +7,7 @@ namespace CineHome.Api.Domain.Entities
     {
         [Required]
         public string Name { get; set; }
+
+        public ICollection<MovieCategoryEntity> MovieCategory { get; set; }
     }
 }
