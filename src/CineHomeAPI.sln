@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "CineHome.Api.Infra.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "CineHome.Api.Service\Service.csproj", "{9C1D2114-ECA5-4349-874C-F4E3ED2F2F87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "CineHome.Api.Test\Test.csproj", "{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{9C1D2114-ECA5-4349-874C-F4E3ED2F2F87}.Release|x64.Build.0 = Release|Any CPU
 		{9C1D2114-ECA5-4349-874C-F4E3ED2F2F87}.Release|x86.ActiveCfg = Release|Any CPU
 		{9C1D2114-ECA5-4349-874C-F4E3ED2F2F87}.Release|x86.Build.0 = Release|Any CPU
+		{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}.Debug|x64.Build.0 = Debug|Any CPU
+		{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}.Debug|x86.Build.0 = Debug|Any CPU
+		{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}.Release|x64.ActiveCfg = Release|Any CPU
+		{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}.Release|x64.Build.0 = Release|Any CPU
+		{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}.Release|x86.ActiveCfg = Release|Any CPU
+		{3AC1B485-7147-4B1E-8BBF-A9E6ADFCCE2F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
